@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <title>Let's Game!</title>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #292929;
+            font: 1.2em Roboto, Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        p {
+            padding: 0 10px;
+            line-height: 1.8;
+        }
+
+        ul li {
+            padding-right: 10px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            padding: 5px 20px;
+            margin: 0;
+        }
+
+        div#header {
+            position: relative;
+        }
+
+        div#header h1 {
+            height: 80px;
+            line-height: 80px;
+            margin: 0;
+            background: #666464;
+            color: #ffeded;
+            text-align: center;
+        }
+
+        div#header a {
+            position: absolute;
+            right: 0;
+            top: 23px;
+            padding: 10px;
+            color: #006;
+        }
+
+        div#navigation {
+            background: #f8bdbd;
+            text-align: center;
+        }
+
+        div#navigation li {
+            list-style: none;
+        }
+
+        div#extra {
+            background: #bcfdba;
+            text-align: center;
+        }
+        div#wrapper {
+            background: #ffd104;
+            text-align: center;
+        }
+
+        div#footer {
+            background: #bcc5f7;
+            color: #fff;
+            text-align: center;
+        }
+
+        div#footer {
+            clear: left;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <h1>Let's Game!</h1>
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            <h3>Some simple games you can play with just a couple of die</h3>
+        </div>
+    </div>
+    <div id="navigation">
+        <h3>List of Games</h3>
+        <ui>
+            {% for game in games %}
+            <li><a href='{{game.path}}'>{{game.name}}</a></li>
+            {% endfor %}
+        </ui>
+    </div>
+    <div id="footer">
+        <p>created by jeremy m doan</p>
+        <p><a href="/tos">terms of service</a></p>
+    </div>
+</div>
+<script type="text/javascript">AddFillerLink("content", "navigation")</script>
+</body>
+</html>
